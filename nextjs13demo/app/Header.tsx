@@ -1,8 +1,9 @@
 
 
-function Header() {
+export default function Header() {
 	return (
-		<div>
-		</div>
+		<header className="p-5 bg-yellow-100">
+			<p>Header</p> 
+		</header>
 	)
 }
