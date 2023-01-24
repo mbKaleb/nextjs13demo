@@ -2,13 +2,19 @@
 
 const fetchTodos = async () => {
 	const res await fetch('https://jsonplaceholder.typicode.com/todos')
-	const data = await res.json()
+	const todos: Todo[] = await res.json()
+	return todos
 }
 
 export default async function TodosList() {
 	const todos = await fetchTodos()
 
-	return (<div>
-		
-	</div>)
+	return (<>
+		{todos.map((todo)=> (
+			<p key={todo.id} >
+				<Link href={`/todos/${todo.id}`}>
+					Todo: {todo.id}
+				</Link>
+		))}
+	</>)
 }
