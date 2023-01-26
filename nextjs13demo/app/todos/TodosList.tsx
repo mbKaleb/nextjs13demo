@@ -1,7 +1,10 @@
 import Link from "next/link"
 
 export type Todo = {
-
+	id: number;
+	userId: number;
+	title: string;
+	completed: boolean;
 }
 
 const fetchTodos = async () => {

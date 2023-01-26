@@ -1,4 +1,5 @@
 import { Todo } from "../TodosList"
+import { notFound } from "next/navigation"
 
 type PageProps = {
     params: {
@@ -16,7 +17,10 @@ const fetchTodos = async (todoId:string) => {
     }
 
 export default async function TodoPage({params: { todoId }}: PageProps) {
-    const todo = await fetchTodos(todoId);
+
+	const todo = await fetchTodos(todoId);
+
+	if (!todo.id) { return notFound() }
 
   return (
     <div>
