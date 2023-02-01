@@ -14,8 +14,8 @@ export default function RootLayout({
       <head></head>
       <body>
         <Header />
-        <TextBackground />
         {children}
+        <TextBackground />
       </body>
     </html>
   );
