@@ -22,11 +22,15 @@ export default async function TodoPage({params: { todoId }}: PageProps) {
 
 	if (!todo.id) { return notFound() }
 
+    const fchelper = (e:any) => {
+        console.log(e)
+    }
+
   return (
     <div>
-        <p>
+        <div contentEditable={true} className={"focus:outline-none"}>
             #{todo.id}: {todo.title}
-        </p>
+        </div>
         <p>Completed: {todo.completed ? "Yes": "No"}</p>
         <p>
             By User: {todo.userId}
