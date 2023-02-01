@@ -2,6 +2,7 @@
 
 import "../styles/globals.css"
 import Header from "./Header"
+import TextBackground from "./TextBackground";
 
 export default function RootLayout({
   children,
@@ -13,9 +14,8 @@ export default function RootLayout({
       <head></head>
       <body>
         <Header />
-        
+        <TextBackground />
         {children}
-        
       </body>
     </html>
   );
