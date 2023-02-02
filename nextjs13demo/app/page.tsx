@@ -1,11 +1,28 @@
+"use client"
+import { useState } from "react"
+import { createEditor } from "slate"
+import { Slate, Editable, withReact } from "slate-react"
 
 export default function Home() {
+
+		// Create a Slate editor object that won't change across renders.
+		const [editor] = useState(() => withReact(createEditor()))
+		const initialValue = [
+			{
+			  type: 'paragraph',
+			  children: [{ text: 'A line of text in a paragraph.' }],
+			},
+		  ]
+		  
+
 	return (
 		<div 
-			className="absolute top-[12.6rem] left-[5rem] leading-[2.13rem] whitespace-break-spaces max-w"
-			contentEditable={true}
+			id="DIV"
+			className="absolute top-[12.52rem] left-[5rem] leading-[2.13rem] whitespace-break-spaces max-w"
 		>
-			Content
+			<Slate editor={editor} value={initialValue}>
+				<Editable />
+			</Slate>
 		</div>
 	)
 }
