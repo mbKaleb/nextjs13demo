@@ -4,7 +4,7 @@ import { createEditor } from "slate"
 import { Slate, Editable, withReact } from "slate-react"
 
 export default function Home() {
-
+	console.log(document.body.scrollHeight)
 		// Create a Slate editor object that won't change across renders.
 		const [editor] = useState(() => withReact(createEditor()))
 		const initialValue = [
@@ -12,8 +12,7 @@ export default function Home() {
 			  type: 'paragraph',
 			  children: [{ text: 'A line of text in a paragraph.' }],
 			},
-		  ]
-		  
+		]
 
 	return (
 		<div 

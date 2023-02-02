@@ -3,7 +3,10 @@ export default function TextBackground() {
     let items = []
     for (let i = 0; i < 21; i++) {
         items.push(
-            <hr className=" mt-8" style={{
+            <hr 
+            className="mt-8" 
+            key={`id-${i}`}
+            style={{
                 color: '#7ea6e6',
                 backgroundColor: '#7ea6e6',
                 height: 2,
