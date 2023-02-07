@@ -15,7 +15,6 @@ export default function TextBackground() {
         )
     }
 
-    
     return (
         <div className="bg-yellow-200 w-full h-[97vh] z-500" >
             <div className="h-24"/>
