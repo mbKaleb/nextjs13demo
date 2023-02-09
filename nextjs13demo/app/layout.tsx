@@ -31,7 +31,9 @@ export default function RootLayout({
       <body>
         <Header />
         <TextBackground />
-        {children}
+        <div className="ml-26 mt-[6.5rem]">
+          {children}
+        </div>
       </body>
     </html>
   );
