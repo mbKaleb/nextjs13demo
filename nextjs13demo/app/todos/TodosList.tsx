@@ -19,9 +19,9 @@ export default async function TodosList() {
 	return (<div className="absolute ml-28">
 		{todos.slice(0,25).map((todo)=> (
 			<p key={todo.id} className="leading-9" >
-				{/* <Link href={`/todos/${todo.id}`}> */}
+				<Link href={`/todos/${todo.id}`}>
 					Todo: {todo.id}
-				{/* </Link> */}
+				</Link>
 			</p>
 		))}
 	</div>)

@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 import { useState } from "react"
 import { createEditor } from "slate"
 import { Slate, Editable, withReact } from "slate-react"
@@ -17,8 +18,9 @@ export default function Home() {
 	return (
 		<div 
 			id="DIV"
-			className="absolute top-[12.52rem] left-[5rem] leading-[2.13rem] whitespace-break-spaces max-w"
-		>
+			className="absolute top-[12.52rem]  ml-28 leading-[2.13rem] whitespace-break-spaces max-w"
+		>	
+			<Link href={`/todos/`}>Todos</Link>
 			<Slate editor={editor} value={initialValue}>
 				<Editable />
 			</Slate>
