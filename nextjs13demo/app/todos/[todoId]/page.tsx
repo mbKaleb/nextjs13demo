@@ -1,6 +1,8 @@
 import { Todo } from "../TodosList"
 import { notFound } from "next/navigation"
 
+import EditableTodoNote from "./EditableTodoNote"
+
 type PageProps = {
     params: {
         todoId: string
@@ -8,10 +10,10 @@ type PageProps = {
 }
 
 const fetchTodos = async (todoId:string) => {
-
     const res = await fetch( 
         `https://jsonplaceholder.typicode.com/todos/${todoId}`, { next: {revalidate: 60} }
         )
+
     const todo: Todo = await res.json()
     return todo
     }
@@ -19,23 +21,15 @@ const fetchTodos = async (todoId:string) => {
 export default async function TodoPage({params: { todoId }}: PageProps) {
 
 	const todo = await fetchTodos(todoId);
-
 	if (!todo.id) { return notFound() }
 
     const fchelper = (e:any) => {
-        console.log(e)
     }
 
   return (
-    <div>
-        <div contentEditable={true} className={"focus:outline-none"}>
-            #{todo.id}: {todo.title}
-        </div>
-        <p>Completed: {todo.completed ? "Yes": "No"}</p>
-        <p>
-            By User: {todo.userId}
-        </p>
-    </div>
+  <>
+    <EditableTodoNote title={todo.title} id={todo.id} userId={todo.userId} completed={todo.completed} />
+  </>
   )
 }
 
