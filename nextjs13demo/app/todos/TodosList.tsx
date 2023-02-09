@@ -16,13 +16,13 @@ const fetchTodos = async () => {
 export default async function TodosList() {
 	const todos = await fetchTodos()
 
-	return (<>
+	return (<div className="absolute">
 		{todos.map((todo)=> (
 			<p key={todo.id} >
-				<Link href={`/todos/${todo.id}`}>
+				{/* <Link href={`/todos/${todo.id}`}> */}
 					Todo: {todo.id}
-				</Link>
+				{/* </Link> */}
 			</p>
 		))}
-	</>)
+	</div>)
 }

@@ -7,6 +7,7 @@ export default function Todos() {
 		<h1>
 			{/* @ts-ignore */}
 			<TodosList />
+			TEST
 		</h1>
 	</div>)
 }

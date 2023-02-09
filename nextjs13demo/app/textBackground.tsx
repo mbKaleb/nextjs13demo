@@ -15,9 +15,8 @@ export default function TextBackground() {
         )
     }
 
-    
     return (
-        <div className="bg-yellow-200 w-full h-[97vh] z-500" >
+        <div className="bg-yellow-200 w-full h-[97vh] z-500 absolute" >
             <div className="h-24"/>
             <div className="absolute top-24 left-16 h-[97vh] p-0.5 border-l-[3px] border-r-[3px]  border-rose-400 z-0 " />
             <hr className=" mt-8" style={{
