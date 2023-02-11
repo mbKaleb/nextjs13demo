@@ -2,8 +2,6 @@
 import { createEditor } from "slate"
 import { Slate, Editable, withReact } from "slate-react"
 import { useState } from "react";
-import { Todo } from "../TodosList";
-import { calcLength } from "framer-motion";
 
 
 export default function EditableTodoNote(props: any ) {
@@ -13,7 +11,7 @@ export default function EditableTodoNote(props: any ) {
     const initialValue = [
         {
           type: 'paragraph',
-          children: [{ text: 'title' }],
+          children: [{ text: title }],
         },
     ]
 

@@ -1,7 +1,7 @@
 import { Todo } from "../TodosList"
 import { notFound } from "next/navigation"
 
-import EditableTodoNote from "./EditableTodoNote"
+import EditableTodoNote from "../../components/EditableTodoNote"
 
 type PageProps = {
     params: {
@@ -11,9 +11,8 @@ type PageProps = {
 
 const fetchTodos = async (todoId:string) => {
     const res = await fetch( 
-        `https://jsonplaceholder.typicode.com/todos/${todoId}`, { next: {revalidate: 60} }
+        `https://jsonplaceholder.typicode.com/todos/${todoId}`, { next: {revalidate: 60} } //incremental site regen in seconds
         )
-
     const todo: Todo = await res.json()
     return todo
     }
@@ -22,9 +21,6 @@ export default async function TodoPage({params: { todoId }}: PageProps) {
 
 	const todo = await fetchTodos(todoId);
 	if (!todo.id) { return notFound() }
-
-    const fchelper = (e:any) => {
-    }
 
   return (
   <>
@@ -40,6 +36,6 @@ export async function generateStaticParams( ) {
     const sTodos = todos.splice(0, 10)
 
     return sTodos.map(todo => ({
-        todoId: todo.id.toString()
+        todoId: todo.id.toString() //must be a string
     }))
 }

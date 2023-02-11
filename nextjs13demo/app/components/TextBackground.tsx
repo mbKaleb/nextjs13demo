@@ -4,7 +4,7 @@ export default function TextBackground() {
     for (let i = 0; i < 26; i++) {
         items.push(
             <hr 
-            className="mt-[2.12rem]"
+            className="mt-[1.3rem]"
             key={`id-${i}`}
             style={{
                 color: '#7ea6e6',

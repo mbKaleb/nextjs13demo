@@ -16,7 +16,7 @@ const fetchTodos = async () => {
 export default async function TodosList() {
 	const todos = await fetchTodos()
 
-	return (<div className="absolute ml-28">
+	return (<div className="absolute">
 		{todos.slice(0,25).map((todo)=> (
 			<p key={todo.id} className="leading-9" >
 				<Link href={`/todos/${todo.id}`}>
