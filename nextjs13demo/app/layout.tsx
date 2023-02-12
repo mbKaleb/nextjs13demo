@@ -10,7 +10,6 @@ import { createEditor } from "slate"
 import { Slate, Editable, withReact } from "slate-react"
 import { useState } from "react";
 
-
 const initialValue = [
   {
     type: 'paragraph',
