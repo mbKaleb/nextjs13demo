@@ -23,6 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 })
 
+
 {
   const [editor] = useState(() => withReact(createEditor()))
   return (
