@@ -24,10 +24,15 @@ export default function RootLayout({
 })
 
 
+
 {
   const [editor] = useState(() => withReact(createEditor()))
   return (
     <html>
+      <head>
+        <style> @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap'); </style>
+      </head>
+      <div className="font-[] "></div>
       <body>
         <Header />
         <TextBackground />
