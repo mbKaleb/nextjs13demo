@@ -13,6 +13,7 @@ const fetchTodos = async () => {
 	return todos
 }
 
+
 export default async function TodosList() {
 	const todos = await fetchTodos()
 
