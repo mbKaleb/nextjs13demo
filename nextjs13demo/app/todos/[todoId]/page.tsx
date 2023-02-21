@@ -22,9 +22,10 @@ export default async function TodoPage({params: { todoId }}: PageProps) {
 	const todo = await fetchTodos(todoId);
 	if (!todo.id) { return notFound() }
 
+    //Here we have a server component with a dynamic child! 
   return (
   <>
-    <EditableTodoNote title={todo.title} id={todo.id} userId={todo.userId} completed={todo.completed} />
+    <EditableTodoNote title={todo.title} id={todo.id} userId={todo.userId} completed={todo.completed} /> 
   </>
   )
 }

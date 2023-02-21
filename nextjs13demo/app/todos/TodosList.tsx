@@ -7,8 +7,12 @@ export type Todo = {
 	completed: boolean;
 }
 
+
+
 const fetchTodos = async () => {
-	const res = await fetch('https://jsonplaceholder.typicode.com/todos')
+	const res = await fetch('https://jsonplaceholder.typicode.com/todos', {
+		next: { revalidate: 60 } //revalidate after 60 seconds
+	})
 	const todos: Todo[] = await res.json()
 	return todos
 }
@@ -27,14 +31,14 @@ export default async function TodosList() {
 	</div>)
 }
 
-// export async function generateStaticParams() {
-// 	//Values of keys must be strings
-// 	const res = await fetch('https://jsonplaceholder.typicode.com/todos');
-// 	const todos: Todo[] = await res.json();
+export async function generateStaticParams() {
+	//Values of keys must be strings
+	const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+	const todos: Todo[] = await res.json();
 
-// 	const trimmedTodos = todos.splice(0, 10);
+	const trimmedTodos = todos.splice(0, 10);
 
-// 	return todos.map((todos) => ({
-// 		todoId: todos.id.toString()
-// 	}))
-// }
+	return todos.map((todos) => ({
+		todoId: todos.id.toString()
+	}))
+}
