@@ -26,3 +26,15 @@ export default async function TodosList() {
 		))}
 	</div>)
 }
+
+export async function generateStaticParams() {
+	//Values of keys must be strings
+	const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+	const todos: Todo[] = await res.json();
+
+	const trimmedTodos = todos.splice(0, 10);
+
+	return todos.map((todos) => ({
+		todoId: todos.id.toString()
+	}))
+}
