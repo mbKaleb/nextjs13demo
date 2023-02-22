@@ -1,8 +1,8 @@
 export default function TextBackground() {
 
-    let items = []
+    let linesArr = []
     for (let i = 0; i < 26; i++) {
-        items.push(
+        linesArr.push(
             <hr 
             className="mt-[1.3rem]"
             key={`id-${i}`}
@@ -25,7 +25,7 @@ export default function TextBackground() {
                 height: 2,
                 borderColor: '#7ea6e6',
             }} />
-            {items}
+            {linesArr}
         </div>
     )
 }

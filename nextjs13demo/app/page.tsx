@@ -13,7 +13,7 @@ export default function Home() {
 			  children: [{ text: 'A line of text in a paragraph.' }],
 			},
 		]
-		let height = window.innerHeight;
+		// let height = window.innerHeight;
 
 
 	return (
