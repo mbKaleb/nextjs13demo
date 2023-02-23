@@ -7,4 +7,4 @@ export default function Todos() {
 			<TodosList />
 	</div>
 	)
-}
+} 

@@ -7,8 +7,6 @@ export type Todo = {
 	completed: boolean;
 }
 
-
-
 const fetchTodos = async () => {
 	const res = await fetch('https://jsonplaceholder.typicode.com/todos', {
 		next: { revalidate: 60 } //revalidate after 60 seconds
