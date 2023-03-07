@@ -24,6 +24,7 @@ export default function RootLayout({
 })
 
 {
+  
   const [editor] = useState(() => withReact(createEditor()))
   return (
     <html>
