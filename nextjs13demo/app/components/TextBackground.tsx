@@ -17,9 +17,11 @@ export default function TextBackground() {
     }
 
     return (
-        <div className="bg-yellow-200 w-full h-[98vh] z-500 absolute" >
-            <div className="h-24"/>
-            <div className="absolute top-0 left-24 h-[68rem] p-0.5 border-l-[3px] border-r-[3px]  border-rose-400 z-0 " />
+        <div className="bg-yellow-200 w-full h-[98vh] z-500 " > {/*yellow */}
+            <div className="h-24"/> {/*padding*/}
+
+            <div className="fixed top-0 left-24 h-[100%] p-0.5 border-l-[3px] border-r-[3px]  border-rose-400  " /> {/*red bars*/}
+            
             <hr className=" mt-8" style={{
                 color: '#7ea6e6',
                 backgroundColor: '#7ea6e6',

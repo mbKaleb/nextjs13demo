@@ -32,7 +32,7 @@ export default function RootLayout({
         <style> @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap'); </style>
       </head>
       <div className="font-[] "></div>
-      <body>
+      <body className="bg-black relative">
         <Header />
         <TextBackground />
         <div className="ml-26 mt-[6.5rem]">
