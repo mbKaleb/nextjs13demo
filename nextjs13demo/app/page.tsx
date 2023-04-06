@@ -10,7 +10,7 @@ export default function Home() {
 		const initialValue = [
 			{
 			  type: 'paragraph',
-			  children: [{ text: 'A line of text in a paragraph.' }],
+			  children: [{ text: 'This is a client component with server wrappers.' }],
 			},
 		]
 		// let height = window.innerHeight;
@@ -19,7 +19,7 @@ export default function Home() {
 	return (
 		<div 
 			id="DIV"
-			className="absolute top-[12.52rem]  ml-28 leading-[2.13rem] whitespace-break-spaces max-w"
+			className="absolute top-[12.8rem]  ml-28 leading-[rem] whitespace-break-spaces max-w"
 		>	
 			<Link href={`/todos/`}>Todos</Link>
 			<Slate editor={editor} value={initialValue}>

@@ -1,15 +1,16 @@
+"use client"
 export default function TextBackground() {
 
     let linesArr = []
     for (let i = 0; i < 26; i++) {
         linesArr.push(
             <hr 
-            className="mt-[1.3rem]"
+            className="mt-[1.378rem]"
             key={`id-${i}`}
             style={{
                 color: '#7ea6e6',
                 backgroundColor: '#7ea6e6',
-                height: 2,
+                height: 2.01,
                 borderColor: '#7ea6e6',
             }} />
         )
